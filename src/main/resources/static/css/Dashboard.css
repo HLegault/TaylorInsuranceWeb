@@ -113,6 +113,40 @@ ul > li {
   box-shadow: 10px 10px #0D4E85;
 }
 
+/*#display_quote {*/
+/*  font-size: 15px;*/
+/*  cursor: pointer;*/
+/*  background-color: #dae1f0;*/
+/*  border: none;*/
+/*}*/
+/*#quote {*/
+/*  visibility: hidden;*/
+/*  display: none;*/
+/*  width: 30%;*/
+/*  background-color: #dae1f0;*/
+/*  position: fixed;*/
+/*  left: 35%;*/
+/*  top: 30%;*/
+/*  border-radius: 10px;*/
+/*  border: 2px solid #0d4e85;*/
+/*}*/
+
+.clickP {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.clickP:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
 @media (max-width: 1199px) {
   .u-section-1 .u-repeater-1 {
     grid-template-columns: repeat(2, calc(50% - 13px));
@@ -152,4 +186,6 @@ ul > li {
     padding-right: 10px;
   }
 }
+
+
 

@@ -115,7 +115,7 @@
 										>
 									</li>
 									<li class="u-nav-item">
-										<a class="u-button-style u-nav-link" href="Quote.html"
+										<a class="u-button-style u-nav-link" onclick="changeURL('/quote')"
 											>Quote</a
 										>
 									</li>
@@ -204,10 +204,17 @@
 									><img src="assets/71649222.png" alt=""
 								/></span>
 								<h3 class="u-text u-text-default u-text-3">Quotes</h3>
-								<p id="quote-number">Quote Number:</p>
-								<p id="quote-date">Quote Date:</p>
-								<p id="premimum-quote">Premium Quote:</p>
-<!--								<p th:text="'Heating Type: ' + ${quoteManager.heatType}" />-->
+								<p onclick="toggleQuote()" class="clickP">Saved Quote</p>
+								<div class="hide" id="quote">
+									<p id="quote-number">Quote Number:</p>
+									<p id="quote-date">Quote Date:</p>
+									<p id="premimum-quote">Premium Quote:</p>
+									<input type="button" id="cancel_button" value="X" />
+								</div>
+								<!--<p id="quote-number">Quote Number:</p>
+								<p id="quote-date">Quote Date:</p>-->
+<!--								<p id="premimum-quote">Premium Quote:</p>
+								<p th:text="'Heating Type: ' + ${quoteManager.heatType}" />-->
 <!--								<p th:text="'Year: ' + ${quoteManager.year}" />-->
 <!--								<p th:text="'Value: ' + ${quoteManager.value}" />-->
 <!--								<p th:text="'Area Type: ' + ${quoteManager.areaType}" />-->
@@ -265,4 +272,28 @@
 	</body>
 	<script class="u-script" type="text/javascript" src="js/Dashboard.js" defer=""></script>
 	<script src="js/changeURL.js"></script>
+	<script>
+		function toggleQuote() {
+			let quote = document.getElementById("quote")
+			quote.classList.toggle("hide");
+		}
+		// $(document).ready(function () {
+		// 	$("#display_quote").click(function () {
+		// 		showquote();
+		// 	});
+		// 	$("#close_button").click(function () {
+		// 		hidequote();
+		// 	});
+		// });
+		//
+		// function showquote() {
+		// 	$("#quote").fadeToggle();
+		// 	$("#quote").css({ visibility: "visible", display: "block" });
+		// }
+		//
+		// function hidequote() {
+		// 	$("#quote").fadeToggle();
+		// 	$("#quote").css({ visibility: "hidden", display: "none" });
+		// }
+	</script>
 </html>

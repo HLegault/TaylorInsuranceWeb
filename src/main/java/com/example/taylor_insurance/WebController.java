@@ -26,7 +26,7 @@ public class WebController {
     public String getForm(@ModelAttribute QuoteManager quoteManager) {
         System.out.println(quoteManager);
         //Do something with data
-        return "redirect:/login";
+        return "redirect:/Dashboard";
     }
 
     //get login page
